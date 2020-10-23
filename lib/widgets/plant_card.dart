@@ -1,6 +1,15 @@
 import 'package:flutter/material.dart';
 
 class PlantCard extends StatefulWidget {
+  final int index;
+  PlantCard({this.index});
+  final images = [
+    'images/plant3.jpg',
+    'images/plant4.jpg',
+    'images/plant5.jpg',
+    'images/plant2.jpg',
+    'images/plant1.JPG',
+  ];
   @override
   _PlantCardState createState() => _PlantCardState();
 }
@@ -23,6 +32,10 @@ class _PlantCardState extends State<PlantCard> {
             height: 150,
             decoration: BoxDecoration(
               color: Colors.grey,
+              image: DecorationImage(
+                image: AssetImage(widget.images[widget.index]),
+                fit: BoxFit.fill,
+              ),
               borderRadius: BorderRadius.circular(10),
             ),
           ),
