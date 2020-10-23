@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plantshop_ui/screens/details.dart';
 import 'package:plantshop_ui/widgets/plant_card.dart';
 import 'package:plantshop_ui/widgets/recents_card.dart';
 
@@ -20,7 +21,19 @@ class _SalePageState extends State<SalePage> {
               itemCount: 5,
               shrinkWrap: true,
               itemBuilder: (context, index) {
-                return PlantCard();
+                return GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) {
+                        return Details();
+                      }),
+                    );
+                  },
+                  child: PlantCard(
+                    index: index,
+                  ),
+                );
               }),
         ),
         SizedBox(height: 15),
@@ -42,7 +55,7 @@ class _SalePageState extends State<SalePage> {
               itemCount: 5,
               shrinkWrap: true,
               itemBuilder: (context, index) {
-                return Recents();
+                return Recents(index: index);
               }),
         ),
       ],
