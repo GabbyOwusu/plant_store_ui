@@ -32,7 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
         backgroundColor: Colors.grey.shade100,
         appBar: AppBar(
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.grey.shade100,
           centerTitle: true,
           title: Text(
             'Shop Plants',
@@ -53,9 +53,13 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             children: [
               Container(
-                height: 180,
+                height: 150,
                 margin: EdgeInsets.only(top: 20, right: 20, left: 20),
                 decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('images/plant1.JPG'),
+                    fit: BoxFit.fitWidth,
+                  ),
                   color: Colors.grey,
                   borderRadius: BorderRadius.circular(20),
                 ),
