@@ -38,6 +38,7 @@ class _NestedTabBarState extends State<NestedTabBar>
         TabBar(
           physics: BouncingScrollPhysics(),
           controller: _nestedTabController,
+          // indicator: ,
           indicatorColor: Colors.transparent,
           labelColor: Colors.black,
           unselectedLabelColor: Colors.grey,
